@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="src/View/css/vizualizar.css">
+  <link rel="stylesheet" href="src/View/css/perfil.css">
+</head>
+
+
+
+<body>
+
+  <div class="nav-container">
+    <h1>{{pagina}}</h1>
+    <nav>
+      <a href="adicionar">Adicionar</a>
+      <a href="vizualizar">Vizualizar</a>
+      <a href="" id="btn-perfil">Perfil</a>
+    </nav>
+  </div>
+
+  <header>
+    <section class="perfil on">
+      <h1>Perfil</h1>
+      <p>Nome</p>
+      <h2>{{nome}}</h2>
+      <p>Email</p>
+      <h2>{{email}}</h2>
+      <p>Senha</p>
+      <h2>{{senha}}</h2>
+
+      <button>sair</button>
+    </section>
+
+    <section class="conteudo-inteiro">
+      <div class="tarefa-pesquisa">
+        <!-- <input type="text" name="" id="tarefaVlr" placeholder="Digite Sua tarefa">
+        <button onclick="adicionarTarefa()" id="adicionar">Adicionar</button> -->
+        <section id="tarefa-${contador}" class="tarefa">
+
+          <div onclick="clicouInpt()" class="tarefa-icone">
+            <img id="icone-${contador}" src="img/circle-outline.svg" alt="icone">
+          </div>
+          <div onclick="clicouInpt()" class="tarefa-txt">
+            <h2>{{tarefaVlr}}</h2>
+          </div>
+          <div onclick="removerTarefa()" class="tarefa-del">
+            <button>Deletar</button>
+          </div>
+
+        </section>
+
+        <section id="tarefa-${contador}" class="tarefa">
+
+          <div onclick="clicouInpt()" class="tarefa-icone">
+            <img id="icone-${contador}" src="img/circle-outline.svg" alt="icone">
+          </div>
+          <div onclick="clicouInpt()" class="tarefa-txt">
+            <h2>{{tarefaVlr}}</h2>
+          </div>
+          <div onclick="removerTarefa()" class="tarefa-del">
+            <button>Deletar</button>
+          </div>
+
+        </section>
+
+        <section id="tarefa-${contador}" class="tarefa">
+
+          <div onclick="clicouInpt()" class="tarefa-icone">
+            <img id="icone-${contador}" src="img/circle-outline.svg" alt="icone">
+          </div>
+          <div onclick="clicouInpt()" class="tarefa-txt">
+            <h2>{{tarefaVlr}}</h2>
+          </div>
+          <div onclick="removerTarefa()" class="tarefa-del">
+            <button>Deletar</button>
+          </div>
+      </div>
+
+
+      <div class="paginacao-container">
+        <button id="btn-anterior" class="seta-btn">
+          << /button>
+
+            <div id="numeros-container" class="numeros-container">
+              <button class="numero-btn ativo">1</button>
+              <button class="numero-btn">2</button>
+              <button class="numero-btn">3</button>
+            </div>
+
+            <button id="btn-proximo" class="seta-btn">></button>
+      </div>
+    </section>
+
+    <section class="tarefaLista">
+      <!-- local das tarefas -->
+    </section>
+  </header>
+  <script src="script.js"></script>
+</body>
+
+</html>

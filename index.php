@@ -1,26 +1,29 @@
 <?php
+
 require_once 'vendor/autoload.php';
 require'src/Database/Conexao.php';
-const URL = "http://localhost/lista_tarefa";
+
+// Para ser acessível via 'global $URL', é melhor definir como variável ou usar DEFINE
+define("URL", "http://localhost/lista_tarefa"); 
+const URL_CONST = "http://localhost/lista_tarefa"; // Mantendo sua constante original
 
 //criar o roteador para paginas
-$roteador = new CoffeeCode\Router\Router(URL);
-
+$roteador = new CoffeeCode\Router\Router(URL_CONST);
 
 $roteador->namespace("Luizeduardo\ListaTarefa\Controller");
 
-//rotas
-
+// Rotas
 $roteador->group(null);
-$roteador->get("/","Principal:home");
 
-$roteador->get("/cadastro","Principal:cadastro");
-$roteador->post("/cadastro","Principal:cadastrar");
+$roteador->get("/", "HomeController:home");
 
-$roteador->get("/login","Principal:login");
-$roteador->post("/login","Principal:autenticar");
+$roteador->get("/cadastro", "UsuarioController:cadastro");
+$roteador->post("/cadastro", "UsuarioController:cadastrar");
+$roteador->get("/login", "Usuario:login");
+$roteador->post("/login", "Usuario:autenticar");
 
-$roteador->get("/adicionar","Principal:adicionar");
 
+$roteador->get("/adicionar", "TarefaController:adicionar");
+$roteador->get("/vizualizar", "TarefaController:vizualizar");
 
 $roteador->dispatch();
