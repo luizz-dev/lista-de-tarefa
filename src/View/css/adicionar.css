@@ -1,0 +1,145 @@
+body {
+  background: #dfdfdfc9;
+  margin: 0;
+}
+header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
+  align-items: center;
+}
+.perfil {
+  display: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.nav-container h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+nav {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-out;
+  font-size: 18px;
+}
+nav a:hover {
+  color: #000;
+  box-shadow: 0 8px 10px #000;
+  animation: 1s;
+}
+nav a:hover:last-child {
+  color: #000;
+  box-shadow: 0 8px 10px #000;
+  /* padding: 10px 15px; */
+  animation: 1s;
+}
+button {
+  cursor: pointer;
+}
+
+.tarefa-add {
+  display: flex;
+  margin-bottom: 60px;
+}
+#tarefaVlr {
+  background: #fff;
+}
+.tarefa-add input {
+  height: 90px;
+  width: 350px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #757575;
+  border-radius: 3px;
+}
+.tarefa-add button {
+  padding: 0;
+  height: 94px;
+  width: 90px;
+  background-color: #169e01;
+  color: #fff !important;
+  margin-left: -10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+}
+.tarefa {
+  display: grid;
+  grid-template-columns: repeat(3, 90px 240px);
+  background: #fff;
+  max-width: 440px;
+  margin-bottom: 3%;
+  box-shadow: 0 0 10px #969494;
+}
+.tarefa-icone img {
+  width: 30px;
+  margin: 20px 0 0 30px;
+  color: #00ff22;
+  cursor: pointer;
+}
+.tarefa-txt h2 {
+  margin-top: 2vh;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.tarefa-del button {
+  background-color: red;
+  height: 100%;
+  color: #fff;
+  width: 110px;
+  border: none;
+  border-radius: 2px;
+}
+.tarefa.clicado {
+  background: #aaf2b5;
+  text-decoration: line-through;
+  color: rgba(70, 69, 69, 0.634);
+}
+
+@media (max-width: 768px) {
+  .tarefa-txt h2 {
+    margin-top: 12%;
+    font-size: 23px;
+  }
+  header {
+    margin-top: 10vh;
+  }
+  .tarefa-add input {
+    width: 300px;
+    font-size: 23px;
+  }
+  .tarefa {
+    width: 300px;
+    grid-template-columns: repeat(3, 90px 185px);
+  }
+  .tarefa-del button {
+    width: 110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tarefa-add input {
+    width: 250px;
+    font-size: 22px;
+  }
+  .tarefa {
+    width: 250px;
+    grid-template-columns: repeat(3, 90px 145px);
+  }
+  .tarefa-del button {
+    width: 110px;
+  }
+}

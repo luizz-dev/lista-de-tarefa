@@ -1,0 +1,20 @@
+{
+    "name": "luizeduardo/lista_tarefa",
+    "description": "uma lista de tarefa funcional remotamente, feita para teste de habilidadesfull-stack e banco de dados",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Luizeduardo\\ListaTarefa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luiz Eduardo",
+            "email": "luizleitefe@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.21",
+        "coffeecode/router": "^2.0"
+    }
+}

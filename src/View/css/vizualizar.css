@@ -1,0 +1,163 @@
+body {
+  background: #dfdfdfc9;
+  margin: 0;
+}
+.perfil {
+  display: none;
+}
+.conteudo-inteiro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75vw; 
+  padding:50px 20px;
+  margin-top: 5dvh; 
+  margin-left: auto; 
+  margin-right: auto; 
+  background-color: #fff;
+  border-radius: 5px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.nav-container h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+nav {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-out;
+  font-size: 18px;
+}
+nav a:hover {
+  color: #000;
+  box-shadow: 0 8px 10px #000;
+  animation: 1s;
+}
+nav a:hover:last-child {
+  color: #000;
+  box-shadow: 0 8px 10px #000;
+  /* padding: 10px 15px; */
+  animation: 1s;
+}
+button {
+  cursor: pointer;
+}
+
+
+.tarefa-pesquisa {
+ 
+}
+
+#tarefaVlr {
+  background: #fff;
+}
+.tarefa-add input {
+  height: 90px;
+  width: 350px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #757575;
+  border-radius: 3px;
+}
+.tarefa-add button {
+  padding: 0;
+  height: 94px;
+  width: 90px;
+  background-color: #169e01;
+  color: #fff !important;
+  margin-left: -10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+}
+.tarefa {
+  display: grid;
+  grid-template-columns: repeat(3, 90px 240px);
+  background: #fff;
+  max-width: 440px;
+  margin-bottom: 3%;
+  box-shadow: 0 0 10px #969494;
+}
+.tarefa-icone img {
+  width: 30px;
+  margin: 20px 0 0 30px;
+  color: #00ff22;
+  cursor: pointer;
+}
+.tarefa-txt h2 {
+  margin-top: 2vh;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.tarefa-del button {
+  background-color: red;
+  height: 100%;
+  color: #fff;
+  width: 110px;
+  border: none;
+  border-radius: 2px;
+}
+.tarefa.clicado {
+  background: #aaf2b5;
+  text-decoration: line-through;
+  color: rgba(70, 69, 69, 0.634);
+}
+
+
+.paginacao-container {
+  width: 100%; 
+  display: flex; 
+  justify-content: flex-end;
+  margin-bottom: -30px; 
+  margin-top: 0px; 
+  align-items: center;
+  gap: 5px; 
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.numeros-container {
+  display: flex;
+  gap: 5px;
+}
+
+
+.seta-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.numero-btn {
+  background-color: #e0e0e0; /* Cor de fundo padrão (cinza claro) */
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  font-size: 1em;
+}
+
+.numero-btn.ativo {
+  background-color: #c0c0c0; /* Cor mais escura para o botão ativo/selecionado */
+  font-weight: bold;
+}
+
+.numero-btn:hover {
+  background-color: #d0d0d0;
+}

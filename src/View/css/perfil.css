@@ -1,0 +1,52 @@
+/* 1. Regra para o perfil estar escondido por padrão */
+.perfil {
+  display: none; /* Garante que está escondido quando a classe 'on' não está presente */
+}
+
+/* 2. Regra que aplica o estilo quando a classe 'on' está ativa */
+.perfil.on {
+  display: flex; /* Habilita o Flexbox */
+    flex-direction: column; /* Organiza o conteúdo em coluna (vertical) */
+    align-items: center; /* CENTRALIZA o conteúdo horizontalmente (h1, p, h2, button) */
+    text-align: center; /* Garante que o texto dentro de h1, p, h2 seja centralizado */
+    gap: 5px;
+    position: fixed;
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 9999; 
+    width: 75vw; 
+    background-color: #000; 
+    color: #fff; 
+    
+    /* Padding e Borda (Opcional, mas recomendado para visual) */
+    padding: 40px;
+    border-radius: 10px;
+
+    /* Exibição */
+    display: block; /* Ou display: flex; se você quiser formatar o conteúdo interno com flexbox */
+}
+
+/* 1. Estilos para os campos de Nome, Email e Senha (h2 e p) */
+.perfil.on h2, .perfil.on p {
+  background-color: #fff;
+  width: 50vw; /* Mantém 50% da largura da tela */
+  text-align: left; /* Mantém o texto alinhado à esquerda DENTRO da caixa branca */
+  color: #000; /* Define a cor do texto para preto (para contraste com o fundo branco) */
+  
+  /* Novo: Centraliza a caixa branca na seção do perfil */
+  /* Como o pai (.perfil.on) usa 'align-items: center', isso não é estritamente necessário, 
+     mas ajuda a garantir se você usar outro 'display' no futuro. */
+  /* margin-left: auto;
+  margin-right: auto; */
+  
+  padding: 5px 15px; /* Adiciona um espaço interno para o texto não encostar na borda */
+  border-radius: 4px; /* Opcional: bordas arredondadas */
+}
+
+/* 2. Estilos para o título (h1) */
+.perfil.on h1 {
+  color: #fff; /* Mantém o título do Perfil branco (contraste com o fundo preto do .perfil.on) */
+  text-align: center;
+}
+

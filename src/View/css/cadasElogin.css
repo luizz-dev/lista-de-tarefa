@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 20px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #1e7e34;
+}
+
+/* Botão de login flutuando na borda */
+.login {
+  position: absolute;
+  top: -14px;
+  right: -30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.login:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+.cadastro {
+  position: absolute;
+  top: -12px;
+  right: -35px;
+  background: #2761c6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.cadastro:hover {
+  background: #050572;
+  transform: scale(1.05);
+}

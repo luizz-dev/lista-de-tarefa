@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   
+  <meta charset="UTF-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+   
+  <link rel="stylesheet" href="/lista-tarefas/src/View/css/cadasElogin.css">
+
+</head>
+
+<body>
+  <form action="http://localhost/lista_tarefa/login" method="POST">
+    <button type="button" class="cadastro" onclick="window.location.href='/lista_tarefa/cadastro'">Cadastro</button>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha" required>
+
+    <input type="submit" value="Logar">
+  </form>
+</body>
+
+</html>
