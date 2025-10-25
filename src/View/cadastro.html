@@ -4,12 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
+  <title>cadastro</title>
   <link rel="stylesheet" href="/lista-tarefas/src/View/css/cadasElogin.css">
 
 </head>
 
 <body>
+  <!--MENSAGEM DE ERRO -->
+  {% if error_message %}
+  <div style="position: fixed;
+  top: 50px;
+  right: 80px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  z-index: 1000;
+  text-align: center;
+  font-weight: bold;">
+    {{ error_message }}
+  </div>
+  {% endif %}
+
   <form action="http://localhost/lista_tarefa/cadastro" method="POST">
     <button type="button" class="login" onclick="window.location.href='/lista_tarefa/login'">Login</button>
     <!-- sem o login.html pq o php nao esta aceitando -->

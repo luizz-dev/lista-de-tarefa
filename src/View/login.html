@@ -13,6 +13,25 @@
 </head>
 
 <body>
+  <!--MENSAGEM DE ERRO -->
+  {% if error_message %}
+  <div style="position: fixed;
+  top: 50px;
+  right: 80px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  z-index: 1000;
+  text-align: center;
+  font-weight: bold;">
+    {{ error_message }}
+  </div>
+  {% endif %}
+
   <form action="http://localhost/lista_tarefa/login" method="POST">
     <button type="button" class="cadastro" onclick="window.location.href='/lista_tarefa/cadastro'">Cadastro</button>
     <label for="email">Email</label>
@@ -20,6 +39,7 @@
 
     <label for="senha">Senha</label>
     <input type="password" name="senha" id="senha" required>
+
 
     <input type="submit" value="Logar">
   </form>
