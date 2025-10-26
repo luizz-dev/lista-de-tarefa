@@ -19,8 +19,9 @@ $roteador->get("/", "HomeController:home");
 
 $roteador->get("/cadastro", "UsuarioController:cadastro");
 $roteador->post("/cadastro", "UsuarioController:cadastrar");
-$roteador->get("/login", "Usuario:login");
-$roteador->post("/login", "Usuario:autenticar");
+
+$roteador->get("/login", "UsuarioController:login");
+$roteador->post("/login", "UsuarioController:autenticar");
 
 
 $roteador->get("/adicionar", "TarefaController:adicionar");
