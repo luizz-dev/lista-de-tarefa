@@ -1,13 +1,14 @@
-import { btnPerfil, perfilSection } from "./domElements.js";
+// profileToggle.js
 
-console.log("ola");
+import { btnPerfil, perfilSection } from "./domElements.js";
 
 function perfilToggle() {
   console.log("Clique no Perfil detectado!");
 
-  // Alterna a classe 'on' no elemento de SEÇÃO DO PERFIL
+  // Altera a classe 'show' no elemento de SEÇÃO DO PERFIL
   if (perfilSection) {
-    perfilSection.classList.toggle("on");
+    // CORREÇÃO: Trocar 'on' por 'show' para corresponder ao CSS
+    perfilSection.classList.toggle("show");
   }
 }
 
@@ -15,6 +16,6 @@ function perfilToggle() {
 if (btnPerfil) {
   btnPerfil.addEventListener("click", perfilToggle);
 } else {
-  // console.error("Erro: Elemento com ID 'btn-perfil' não encontrado no DOM.");
+  console.error("Erro: Elemento com ID 'btn-perfil' não encontrado no DOM.");
   // Comentado para evitar erro se o botão for opcional.
 }

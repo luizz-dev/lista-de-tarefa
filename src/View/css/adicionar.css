@@ -10,9 +10,7 @@ header {
   margin-top: 20vh;
   align-items: center;
 }
-.perfil {
-  display: none;
-}
+
 .nav-container {
   display: flex;
   justify-content: space-around;
